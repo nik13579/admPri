@@ -1,0 +1,28 @@
+﻿<Window x:Class="View.NewAndEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:Model;assembly=Model"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle}" Height="550" Width="400" FontSize="14" Background="#1d3557" Loaded="Window_Loaded">
+    <Window.Resources>
+        <model:BoolToValueConverter x:Key="converter"></model:BoolToValueConverter>
+        <model:DateConverter x:Key="DateConverter"></model:DateConverter>
+    </Window.Resources>
+    <Border Background="#4a6fa5" CornerRadius="20" Margin="30">
+        <StackPanel Margin="20">
+            <Label x:Name="label" Content="User Name" Foreground="White" FontSize="20"/>
+            <TextBox Text="{Binding CurrentUser.User_name}" x:Name="userNameTxtBox"  TextWrapping="Wrap" Background="#bfd7ff" Padding="7" Foreground="#1d3557" FontSize="17" FontWeight="Medium" BorderBrush="#eeeeee" BorderThickness="1">
+            </TextBox>
+            <Label x:Name="label1" Content="Password" Foreground="White" FontSize="20"/>
+            <TextBox Text="{Binding CurrentUser.User_pass}" x:Name="passwordTxtBox" TextWrapping="Wrap" Background="#bfd7ff" Padding="7" Foreground="#1d3557" FontSize="17" FontWeight="Medium" BorderBrush="#eeeeee" BorderThickness="1"/>
+            <Label x:Name="label3" Content="Date Of Birth" Foreground="White" FontSize="20"/>
+            <TextBox Text="{Binding CurrentUser.DateOfBirth, Converter={StaticResource DateConverter}}" x:Name="dateOfBirthTxtBox" TextWrapping="Wrap" Background="#bfd7ff" Padding="7" Foreground="#1d3557" FontSize="17" FontWeight="Medium" BorderBrush="#eeeeee" BorderThickness="1"/>
+            <Label x:Name="label2" Content="Is Admin" Foreground="White" FontSize="20"/>
+            <TextBox Text="{Binding CurrentUser.Is_admin, Converter={StaticResource converter}}" TextWrapping="Wrap" Background="#bfd7ff" Padding="7" Foreground="#1d3557" FontSize="17" FontWeight="Medium" BorderBrush="#eeeeee" BorderThickness="1"/>
+            <Button Command="{Binding SaveCommand}" x:Name="button" Content="Save"  Margin="80,20" Padding="10" Background="#bfd7f1" Foreground="#1d3557" FontSize="20" BorderBrush="#eeeeee" BorderThickness="2"/>
+        </StackPanel>
+    </Border>
+</Window>

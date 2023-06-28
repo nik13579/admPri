@@ -1,0 +1,12 @@
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\bin\Debug\Model.dll
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\bin\Debug\Model.pdb
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\obj\Debug\Model.dll
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\Model\obj\Debug\Model.pdb
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\bin\Debug\Model.dll
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\bin\Debug\Model.pdb
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\obj\Debug\Model.dll
+C:\Users\USER\Downloads\admPri\UserAdmin\Model\obj\Debug\Model.pdb

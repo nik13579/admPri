@@ -1,0 +1,17 @@
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\bin\Debug\Model.dll
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\bin\Debug\Model.pdb
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\obj\Debug\ViewModel.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\obj\Debug\ViewModel.csproj.CopyComplete
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\USER\Downloads\user-administration-main\UserAdmin\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\bin\Debug\Model.dll
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\bin\Debug\Model.pdb
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\obj\Debug\ViewModel.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\USER\Downloads\admPri\UserAdmin\ViewModel\obj\Debug\ViewModel.pdb

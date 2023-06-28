@@ -1,0 +1,57 @@
+﻿<Window x:Class="View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:Model;assembly=Model"
+        mc:Ignorable="d"
+        Title="Users List" Height="650" Width="900" FontSize="18" Background="#1f7a8c">
+    <Window.Resources>
+        <model:BoolToValueConverter x:Key="converter"></model:BoolToValueConverter>
+    </Window.Resources>
+    <Border Background="#f8f7ff" CornerRadius="20" Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="152*"/>
+                <RowDefinition Height="30*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="173*"/>
+                <ColumnDefinition Width="221*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Header="User Details" HorizontalAlignment="Left" Margin="50,61,0,0" VerticalAlignment="Top" Width="280" Grid.Column="0" FontSize="20" Foreground="#1f7a8c" BorderBrush="#bfdbf7" Height="455" Grid.RowSpan="3">
+                <StackPanel>
+                    <Label Content="User Name" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,2" Foreground="#0d47a1" BorderBrush="#e1e5f2" BorderThickness="0,0,0,2"/>
+                    <Label Content="{Binding CurrentUser.User_name, ValidatesOnNotifyDataErrors=False}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,0" Padding="15" Foreground="#197278" HorizontalContentAlignment="Center"/>
+                    <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,2" Foreground="#0d47a1" BorderBrush="#e1e5f2" BorderThickness="0,0,0,2"/>
+                    <Label Content="{Binding CurrentUser.User_pass, ValidatesOnNotifyDataErrors=False}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,0" Padding="15" Foreground="#197278" HorizontalContentAlignment="Center"/>
+                    <Label Content="Date Of Birth" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,2" Foreground="#0d47a1" BorderBrush="#e1e5f2" BorderThickness="0,0,0,2"/>
+                    <Label Content="{Binding CurrentUser.DateOfBirth, ValidatesOnNotifyDataErrors=False}" ContentStringFormat="{}{0:dd. MMMM yyyy.}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,0" Padding="15" Foreground="#197278" HorizontalContentAlignment="Center"/>
+                    <Label Content="Is Admin" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,2" Foreground="#0d47a1" BorderBrush="#e1e5f2" BorderThickness="0,0,0,2"/>
+                    <Label Content="{Binding CurrentUser.Is_admin, ValidatesOnNotifyDataErrors=False, Converter={StaticResource converter}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,0" Padding="15" Foreground="#197278" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </GroupBox>
+            <Label Content="List Of All Users" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="50,10,40,340" FontSize="20" Foreground="#1f7a8c" BorderBrush="#e1e5f2" BorderThickness="0,0,0,2"></Label>
+            <ListBox ItemsSource="{Binding UserListView, ValidatesOnNotifyDataErrors=False}" SelectedItem="{Binding CurrentUser, ValidatesOnNotifyDataErrors=False}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350" Height="160" Grid.Column="1" Grid.Row="1" Background="#e3f2fd" Foreground="#197278" BorderBrush="#c6def1" BorderThickness="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Path=User_name, ValidatesOnNotifyDataErrors=False}" Foreground="#197278"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="newBtn" Content="New" Width="84" Height="30" Margin="0,0,15,0" Background="#caf0f8" Foreground="#0d47a1" BorderBrush="#c6def1" BorderThickness="2" Click="NewBtn_Click" />
+                <Button Name="editBtn" Content="Edit" Width="84" Height="30" Margin="0,0,15,0" Background="#caf0f8" Foreground="#0d47a1" BorderBrush="#c6def1" BorderThickness="2" Click="EditBtn_Click"/>
+                <Button Command="{Binding DeleteCommand}" Name="deleteBtn" Content="Delete" Width="84" Height="30" Background="#caf0f8" Foreground="#0d47a1" BorderBrush="#c6def1" BorderThickness="2"/>
+            </StackPanel>
+            <TextBox Name="FilteringBox" Text="{Binding FilteringText, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="170,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Background="#f8f7ff" Foreground="#0d47a1" BorderBrush="#c6def1" BorderThickness="1" FontSize="16" VerticalContentAlignment="Center"/>
+            <Label Content="Filter:" Grid.Column="1" HorizontalAlignment="Left" Margin="64,43,0,0" VerticalAlignment="Top" Width="91" Height="33" FontSize="19" Foreground="#1f7a8c" BorderBrush="#c6def1" BorderThickness="1,0,0,1"/>
+        </Grid>
+    </Border>
+</Window>
+
